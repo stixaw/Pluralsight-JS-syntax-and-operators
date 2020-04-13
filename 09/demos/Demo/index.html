@@ -100,6 +100,7 @@
       // Careful with object arrays
       // The array is copied, but the underlying objects are still accessed by reference
       let diff = [..._products];
+      console.log("Diff" ,diff)
       diff[0].productID = 999;
       console.log(_products[0].productID);
       console.log(diff[0].productID);
@@ -112,6 +113,7 @@
 
       let spProducts = [..._products, ..._newProducts];
       console.log(spProducts.length);
+      console.log(spProducts)
     }
 
     // Use with 'new'

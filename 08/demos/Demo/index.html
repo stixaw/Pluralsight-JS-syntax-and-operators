@@ -18,13 +18,13 @@
   <button onclick="constructorFunctions();">Constructor Functions</button>
 
   <script>
-    // 'use strict';
+    'use strict';
   
     // Global scope - 'this' is mapped to global/window object
-    console.log("Begin: global scope sample");
-    console.log(this.toString());
-    console.log("this === window = " + (this === window).toString());
-    console.log("End: global scope sample");
+    // console.log("Begin: global scope sample");
+    // console.log(this.toString());
+    // console.log("this === window = " + (this === window).toString());
+    // console.log("End: global scope sample");
 
     // Function scope - 'this' is mapped to global/window object
     //                  Uncomment 'use strict' above to show how it affects this function
@@ -46,6 +46,7 @@
         "standardCost": 1059.31,
         "listPrice": 1431.50,
         grossProfit: function () {
+          console.log(this.toString());
           return (this.listPrice - this.standardCost)
             .toLocaleString('en-US', {
               style: 'currency', currency: 'USD'
@@ -63,6 +64,7 @@
         "standardCost": 1059.31,
         "listPrice": 1431.50,
         grossProfit: function () {
+          console.log(this.toString());
           return (this.listPrice - this.standardCost)
             .toLocaleString("en-US", {
               "style": "currency", "currency": "USD"
@@ -99,6 +101,7 @@
       this.listPrice = price;
 
       this.grossProfit = function () {
+        console.log(this.toString());
         return (this.listPrice - this.standardCost)
             .toLocaleString("en-US", {
               "style": "currency", "currency": "USD"
